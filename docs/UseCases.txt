@@ -1,0 +1,9 @@
+Use Cases
+
+- Add stories to backlog
+- Add sub tasks
+- Put stories in sprints
+- Mark stories as complete, aborted (with a reason), inprogress, new
+- Assign stories to a user
+- Query all of my tasks
+- query all of my teams tasks
