@@ -1,0 +1,49 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'expressjs' ]
+2 info using npm@1.1.65
+3 info using node@v0.8.14
+4 verbose read json /Users/mandy/package.json
+5 verbose read json /Users/mandy/node_modules/express/package.json
+6 verbose read json /Users/mandy/node_modules/mongodb/package.json
+7 verbose read json /Users/mandy/node_modules/mongoose/package.json
+8 verbose read json /Users/mandy/node_modules/nodemon/package.json
+9 verbose read json /Users/mandy/node_modules/parrot/package.json
+10 verbose read json /Users/mandy/node_modules/supervisor/package.json
+11 verbose read json /Users/mandy/node_modules/underscore/package.json
+12 verbose read json /Users/mandy/package.json
+13 verbose cache add [ 'expressjs', null ]
+14 silly cache add name=undefined spec="expressjs" args=["expressjs",null]
+15 verbose parsed url { pathname: 'expressjs', path: 'expressjs', href: 'expressjs' }
+16 silly lockFile 641f587e-expressjs expressjs
+17 verbose lock expressjs /Users/mandy/.npm/641f587e-expressjs.lock
+18 silly lockFile 641f587e-expressjs expressjs
+19 verbose addNamed [ 'expressjs', '' ]
+20 verbose addNamed [ null, '' ]
+21 silly lockFile 04250d81-expressjs expressjs@
+22 verbose lock expressjs@ /Users/mandy/.npm/04250d81-expressjs.lock
+23 silly addNameRange { name: 'expressjs', range: '', hasData: false }
+24 verbose url raw expressjs
+25 verbose url resolving [ 'https://registry.npmjs.org/', './expressjs' ]
+26 verbose url resolved https://registry.npmjs.org/expressjs
+27 info trying registry request attempt 1 at 11:45:49
+28 http GET https://registry.npmjs.org/expressjs
+29 http 404 https://registry.npmjs.org/expressjs
+30 silly registry.get cb [ 404,
+30 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+30 silly registry.get     date: 'Thu, 03 Jan 2013 00:44:36 GMT',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'content-length': '52',
+30 silly registry.get     'cache-control': 'must-revalidate' } ]
+31 silly lockFile 04250d81-expressjs expressjs@
+32 error 404 'expressjs' is not in the npm registry.
+32 error 404 You should bug the author to publish it
+32 error 404
+32 error 404 Note that you can also install from a
+32 error 404 tarball, folder, or http url, or git url.
+33 error System Darwin 11.4.2
+34 error command "node" "/usr/local/bin/npm" "install" "expressjs"
+35 error cwd /Users/mandy/Vhosts/Velox/lib
+36 error node -v v0.8.14
+37 error npm -v 1.1.65
+38 error code E404
+39 verbose exit [ 1, true ]

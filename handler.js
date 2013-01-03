@@ -1,4 +1,5 @@
 var db = require('./database');
+var fs = require('fs');
 var ui = require('./ui');
 
 function add(response) {
@@ -7,6 +8,17 @@ function add(response) {
   response.write(ui.htmlStart());
   response.write(ui.menu());
   db.add(response);
+}
+
+function css(response, pathname) {
+  console.log("Request handler for CSS files was called.");
+  //TODO MUST check this URL for injection attacks!
+  fs.readFile(__dirname + pathname, function (err, data) {
+  if (err) console.log(err);
+    response.writeHead(200, {'Content-Type': 'text/css'});
+    response.write(data);
+    response.end();
+  });
 }
 
 function edit(response) {
@@ -36,6 +48,28 @@ function home(response) {
   response.end();
 }
 
+function image(response, pathname) {
+  console.log("Request handler for JavaScript files was called.");
+  //TODO MUST check this URL for injection attacks!
+  fs.readFile(__dirname + pathname, function (err, data) {
+  if (err) console.log(err);
+    response.writeHead(200, {'Content-Type': 'image/png'});
+    response.write(data);
+    response.end();
+  });
+}
+
+function js(response, pathname) {
+  console.log("Request handler for JavaScript files was called.");
+  //TODO MUST check this URL for injection attacks!
+  fs.readFile(__dirname + pathname, function (err, data) {
+  if (err) console.log(err);
+    response.writeHead(200, {'Content-Type': 'text/javascript'});
+    response.write(data);
+    response.end();
+  });
+}
+
 function list(response) {
   console.log("Request handler 'list' was called.");
   response.writeHead(200, {"Content-Type": "text/html"});
@@ -61,9 +95,12 @@ function remove(response) {
 }
 
 exports.add = add;
+exports.css = css;
 exports.edit = edit;
 exports.error404 = error404;
 exports.home = home;
+exports.image = image;
+exports.js = js;
 exports.list = list;
 exports.read = read;
 exports.remove = remove;
